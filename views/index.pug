@@ -1,0 +1,17 @@
+extends layout
+
+block content
+  h1= title
+  p Welcome to #[em Kitchen Product Inventory Management], a simple inventory management website created using Express
+
+  h2 Dynamic Content
+
+  if err
+   p Error getting the data
+
+  else
+   p Number of items and categories of the website:
+
+  ul
+    li #[strong Categories: ] !{result.category_count} 
+    li #[strong Items: ] !{result.item_count}
